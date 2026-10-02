@@ -1,66 +1,386 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel E-Commerce Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-featured **E-Commerce Management System** built with **Laravel 9**, designed to demonstrate real-world web application development, including product management, categories, product images, shopping cart, checkout, orders, authentication, and an admin panel.
 
-## About Laravel
+This project was developed as a portfolio project to demonstrate practical **Laravel, PHP, MySQL, MVC, CRUD, authentication, database relationships, file/image management, and responsive UI** development skills.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 👤 Customer Features
 
-## Learning Laravel
+* User registration and login
+* User authentication
+* Browse products
+* View product details
+* Browse products by category
+* Product search
+* Product images
+* Add products to cart
+* Update cart quantities
+* Remove products from cart
+* Checkout
+* Place orders
+* View order information
+* Customer dashboard
+* Profile management
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🛠️ Admin Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* Admin dashboard
+* Category management
+* Create, edit and delete categories
+* Product management
+* Create, edit and delete products
+* Product image upload and management
+* Product pricing management
+* Product stock management
+* Product status management
+* Order management
+* View customer orders
+* Update order status
+* Admin authentication and access control
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🛒 Shopping & Order Management
 
-## Laravel Sponsors
+* Shopping cart system
+* Cart quantity management
+* Product price calculation
+* Checkout process
+* Order creation
+* Order details
+* Order status management
+* Customer order history
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## 💻 Technologies Used
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* **PHP**
+* **Laravel 9.52.22**
+* **MySQL**
+* **Blade Templates**
+* **Laravel Eloquent ORM**
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **Tailwind CSS**
+* **Vite**
+* **Git & GitHub**
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🏗️ Project Architecture
 
-## Code of Conduct
+The application follows the **MVC (Model-View-Controller)** architecture provided by Laravel.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Main Components
 
-## Security Vulnerabilities
+* **Models** — Database interaction and relationships
+* **Controllers** — Application/business logic
+* **Blade Views** — User interface
+* **Migrations** — Database structure
+* **Middleware** — Authentication and admin access control
+* **Routes** — Application URL and request handling
+* **Storage** — Product image management
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📦 Main Modules
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Authentication
+
+Users can register, login, logout and manage their profile through the authentication system.
+
+### Categories
+
+Administrators can:
+
+* Create categories
+* Edit categories
+* Delete categories
+* Manage category information
+
+### Products
+
+Administrators can manage:
+
+* Product name
+* Description
+* Price
+* Stock
+* Category
+* Product image
+* Product status
+
+Customers can browse products and view detailed product information.
+
+### Shopping Cart
+
+Customers can:
+
+* Add products to cart
+* Change product quantity
+* Remove products
+* View cart totals
+
+### Checkout
+
+The checkout module allows customers to review their cart and place orders.
+
+### Orders
+
+Customers can view their orders, while administrators can manage orders and update their status.
+
+---
+
+## 🖼️ Product Image Management
+
+The system includes product image upload and display functionality.
+
+Uploaded product images are stored using Laravel's storage system and displayed dynamically throughout the application.
+
+---
+
+## 🔐 Access Control
+
+The application uses Laravel authentication and middleware to separate customer and administrator functionality.
+
+### Customer
+
+Customers can access:
+
+* Products
+* Product details
+* Cart
+* Checkout
+* Orders
+* Profile
+
+### Administrator
+
+Administrators can access:
+
+* Admin Dashboard
+* Categories
+* Products
+* Orders
+
+---
+
+## ⚙️ Installation
+
+Follow the steps below to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/samina2108/ecommerce-management-system.git
+```
+
+### 2. Open the Project
+
+```bash
+cd ecommerce-management-system
+```
+
+### 3. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 4. Create Environment File
+
+Copy the `.env.example` file and create:
+
+```text
+.env
+```
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure Database
+
+Open the `.env` file and configure your MySQL database:
+
+```env
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
+
+### 7. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Create Storage Link
+
+```bash
+php artisan storage:link
+```
+
+### 9. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 10. Run Vite
+
+```bash
+npm run dev
+```
+
+### 11. Start Laravel Server
+
+```bash
+php artisan serve
+```
+
+The application will normally be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## 🗄️ Database
+
+The project uses **MySQL** as the database.
+
+Laravel migrations are included in the project for creating and maintaining the database structure.
+
+---
+
+## 📸 Screenshots
+
+Screenshots of the application will be added here after the project is deployed and the final UI screenshots are captured.
+
+### Customer Website
+
+* Home Page
+* Products Page
+* Product Details
+* Shopping Cart
+* Checkout
+* Orders
+
+### Admin Panel
+
+* Admin Dashboard
+* Category Management
+* Product Management
+* Order Management
+
+---
+
+## 🌐 Live Demo
+
+Live demo will be added after deployment.
+
+```text
+Coming Soon
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+app/
+├── Http/
+│   ├── Controllers/
+│   └── Middleware/
+├── Models/
+
+database/
+├── migrations/
+└── seeders/
+
+resources/
+├── views/
+├── css/
+└── js/
+
+routes/
+└── web.php
+
+storage/
+└── app/
+```
+
+---
+
+## 🔧 Useful Laravel Commands
+
+Run migrations:
+
+```bash
+php artisan migrate
+```
+
+Create storage link:
+
+```bash
+php artisan storage:link
+```
+
+Clear application cache:
+
+```bash
+php artisan optimize:clear
+```
+
+Start development server:
+
+```bash
+php artisan serve
+```
+
+---
+
+## 🎯 Project Purpose
+
+This project was developed as a **professional Laravel portfolio project** to demonstrate practical experience in building a complete e-commerce web application.
+
+It demonstrates:
+
+* Laravel MVC architecture
+* CRUD operations
+* Authentication
+* Authorization
+* MySQL database integration
+* Eloquent relationships
+* Product management
+* Image upload and storage
+* Shopping cart functionality
+* Checkout and order management
+* Admin panel
+* Responsive user interface
+* Git and GitHub workflow
+
+---
+
+## 👩‍💻 Developer
+
+**Samina Parveen**
+
+Laravel / PHP Developer
+
+GitHub:
+https://github.com/samina2108
+
+---
+
+## 📄 License
+
+This project is developed for portfolio and learning purposes.
