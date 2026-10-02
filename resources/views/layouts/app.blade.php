@@ -1,195 +1,59 @@
-<x-app-layout>
+<!DOCTYPE html>
 
-    <x-slot name="header">
-        <div class="flex justify-between items-center">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Categories
-            </h2>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <a href="{{ route('admin.categories.create') }}"
-               class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
-                + Add Category
-            </a>
-        </div>
-    </x-slot>
+```
+<title>{{ config('app.name', 'Laravel E-Commerce') }}</title>
 
-    <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+```
 
-            {{-- Success Message --}}
-            @if(session('success'))
-                <div class="mb-4 px-4 py-3 bg-green-100 border border-green-400 text-green-700 rounded">
-                    {{ session('success') }}
-                </div>
-            @endif
+</head>
 
-            {{-- Search --}}
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-6">
-                <div class="p-6">
+<body class="font-sans antialiased bg-gray-50 text-gray-800">
 
-                    <form method="GET"
-                          action="{{ route('admin.categories.index') }}"
-                          class="flex gap-3">
+```
+<div class="min-h-screen flex flex-col">
 
-                        <input
-                            type="text"
-                            name="search"
-                            value="{{ request('search') }}"
-                            placeholder="Search category..."
-                            class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                        >
+    {{-- Navigation --}}
+    @include('layouts.navigation')
 
-                        <button type="submit"
-                                class="px-5 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
-                            Search
-                        </button>
-
-                    </form>
-
-                </div>
+    {{-- Page Header --}}
+    @isset($header)
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                {{ $header }}
             </div>
+        </header>
+    @endisset
 
-            {{-- Categories Table --}}
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+    {{-- Main Content --}}
+    <main class="flex-grow">
+        {{ $slot }}
+    </main>
 
-                <div class="p-6">
+    {{-- Footer --}}
+    <footer class="bg-gray-900 text-gray-300 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <h3 class="text-xl font-semibold text-white">
+                Laravel E-Commerce
+            </h3>
 
-                    <div class="overflow-x-auto">
+            <p class="mt-2 text-sm">
+                Shop quality products at affordable prices.
+            </p>
 
-                        <table class="min-w-full divide-y divide-gray-200">
-
-                            <thead class="bg-gray-50">
-
-                                <tr>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                        #
-                                    </th>
-
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Name
-                                    </th>
-
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Description
-                                    </th>
-
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Status
-                                    </th>
-
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                        Created
-                                    </th>
-
-                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">
-                                        Actions
-                                    </th>
-                                </tr>
-
-                            </thead>
-
-                            <tbody class="bg-white divide-y divide-gray-200">
-
-                                @forelse($categories as $category)
-
-                                    <tr>
-
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            {{ $loop->iteration + ($categories->currentPage() - 1) * $categories->perPage() }}
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                                            {{ $category->name }}
-                                        </td>
-
-                                        <td class="px-6 py-4 text-gray-600">
-                                            {{ $category->description
-                                                ? Str::limit($category->description, 50)
-                                                : 'N/A' }}
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap">
-
-                                            @if($category->status === 'active')
-
-                                                <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-700">
-                                                    Active
-                                                </span>
-
-                                            @else
-
-                                                <span class="px-2 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-700">
-                                                    Inactive
-                                                </span>
-
-                                            @endif
-
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap text-gray-600">
-                                            {{ $category->created_at->format('d M Y') }}
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap text-right">
-
-                                            <a href="{{ route('admin.categories.show', $category) }}"
-                                               class="text-blue-600 hover:text-blue-900 mr-3">
-                                                View
-                                            </a>
-
-                                            <a href="{{ route('admin.categories.edit', $category) }}"
-                                               class="text-indigo-600 hover:text-indigo-900 mr-3">
-                                                Edit
-                                            </a>
-
-                                            <form action="{{ route('admin.categories.destroy', $category) }}"
-                                                  method="POST"
-                                                  class="inline"
-                                                  onsubmit="return confirm('Are you sure you want to delete this category?');">
-
-                                                @csrf
-                                                @method('DELETE')
-
-                                                <button type="submit"
-                                                        class="text-red-600 hover:text-red-900">
-                                                    Delete
-                                                </button>
-
-                                            </form>
-
-                                        </td>
-
-                                    </tr>
-
-                                @empty
-
-                                    <tr>
-                                        <td colspan="6"
-                                            class="px-6 py-8 text-center text-gray-500">
-                                            No categories found.
-                                        </td>
-                                    </tr>
-
-                                @endforelse
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                    {{-- Pagination --}}
-                    @if($categories->hasPages())
-                        <div class="mt-6">
-                            {{ $categories->links() }}
-                        </div>
-                    @endif
-
-                </div>
-
-            </div>
-
+            <p class="mt-4 text-xs text-gray-400">
+                © {{ date('Y') }} Laravel E-Commerce. All rights reserved.
+            </p>
         </div>
-    </div>
+    </footer>
 
-</x-app-layout>
+</div>
+```
+
+</body>
+</html>

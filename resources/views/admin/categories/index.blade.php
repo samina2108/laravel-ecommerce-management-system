@@ -1,22 +1,24 @@
-@extends('layouts.app')
+<x-app-layout>
 
-@section('content')
+    <x-slot name="header">
+        <div class="flex justify-between items-center">
+            <div>
+                <h2 class="font-semibold text-xl text-gray-800">
+                    Categories
+                </h2>
+                <p class="text-sm text-gray-500 mt-1">
+                    Manage your product categories.
+                </p>
+            </div>
 
-<div class="container py-4">
-
-    {{-- Page Header --}}
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <div>
-            <h1 class="fw-bold mb-1">Categories</h1>
-            <p class="text-muted mb-0">
-                Manage your product categories.
-            </p>
+            <a href="{{ route('admin.categories.create') }}"
+               class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+                + Add Category
+            </a>
         </div>
+    </x-slot>
 
-        <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">
-            + Add Category
-        </a>
-    </div>
+
 
     {{-- Success Message --}}
     @if(session('success'))
@@ -185,4 +187,4 @@
 
 </div>
 
-@endsection
+</x-app-layout>
