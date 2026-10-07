@@ -289,13 +289,7 @@ Screenshots of the application will be added here after the project is deployed 
 
 ## 🌐 Live Demo
 
-Live demo will be added after deployment.
-
-```text
-Coming Soon
-```
-
----
+https://ecomerceshop.site.je/shop
 
 ## 📁 Project Structure
 
