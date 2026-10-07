@@ -180,13 +180,13 @@ Follow the steps below to run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/samina2108/ecommerce-management-system.git
+git clone https://github.com/samina2108/laravel-ecommerce-management-system.git
 ```
 
 ### 2. Open the Project
 
 ```bash
-cd ecommerce-management-system
+cd laravel-ecommerce-management-system
 ```
 
 ### 3. Install PHP Dependencies
