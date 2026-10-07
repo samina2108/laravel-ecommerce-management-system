@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-**Live Website:** https://ecommerceshop.site.je/shop
+**Live Website:** https://ecomerceshop.site.je/shop
 
 A full-featured **E-Commerce Management System** built with **Laravel 9**, designed to demonstrate real-world web application development, including product management, categories, product images, shopping cart, checkout, orders, authentication, and an admin panel.
 
