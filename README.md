@@ -293,7 +293,7 @@ Laravel migrations are included in the project for creating and maintaining the 
 
 ### 📦 Admin Products
 
-![Admin Products](/admin product.png)
+![Admin Products](/admin-products.png)
 
 ### 🧾 Admin Orders
 
