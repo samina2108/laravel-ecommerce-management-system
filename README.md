@@ -297,7 +297,7 @@ Laravel migrations are included in the project for creating and maintaining the 
 
 ### 🧾 Admin Orders
 
-![Admin Orders](/admin-order.png)
+![Admin Orders](/admin order.png)
 
 ### Customer Website
 
