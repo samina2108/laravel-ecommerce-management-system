@@ -8,6 +8,13 @@ A full-featured **E-Commerce Management System** built with **Laravel 9**, desig
 
 This project was developed as a portfolio project to demonstrate practical **Laravel, PHP, MySQL, MVC, CRUD, authentication, database relationships, file/image management, and responsive UI** development skills.
 
+### Demo Credentials
+
+| Role     | Email                    | Password          |
+| -------- | ------------------------ | ----------------- |
+| Admin    | `admin@example.com`   | `Admin@12345` |
+| Customer | ``| `samina@gmail.com` | 'samina12345' |
+
 ---
 
 ## 🚀 Features
