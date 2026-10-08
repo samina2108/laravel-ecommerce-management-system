@@ -267,7 +267,37 @@ Laravel migrations are included in the project for creating and maintaining the 
 
 ## 📸 Screenshots
 
-Screenshots of the application will be added here after the project is deployed and the final UI screenshots are captured.
+### 🛍️ Shop
+
+![Shop](shop.png)
+
+### 📦 Products
+
+![Products](/product.png)
+
+### 🔎 Product Details
+
+![Product Details](/product detail.png)
+
+### 🛒 Shopping Cart
+
+![Shopping Cart](/cart.png)
+
+### 💳 Checkout
+
+![Checkout](/checkout.png)
+
+### 📊 Admin Dashboard
+
+![Admin Dashboard](/admin dashboard.png)
+
+### 📦 Admin Products
+
+![Admin Products](/admin product.png)
+
+### 🧾 Admin Orders
+
+![Admin Orders](/admin-order.png)
 
 ### Customer Website
 
