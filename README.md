@@ -13,7 +13,7 @@ This project was developed as a portfolio project to demonstrate practical **Lar
 | Role     | Email                    | Password          |
 | -------- | ------------------------ | ----------------- |
 | Admin    | `admin@example.com`   | `Admin@12345` |
-| Customer | ``| `samina@gmail.com` | 'samina12345' |
+| Customer | `samina@gmail.com` | 'samina12345' |
 
 ---
 
@@ -323,10 +323,6 @@ Laravel migrations are included in the project for creating and maintaining the 
 * Order Management
 
 ---
-
-## 🌐 Live Demo
-
-https://ecomerceshop.site.je/shop
 
 ## 📁 Project Structure
 
