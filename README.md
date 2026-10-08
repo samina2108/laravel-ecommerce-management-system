@@ -269,7 +269,7 @@ Laravel migrations are included in the project for creating and maintaining the 
 
 ### 🛍️ Shop
 
-![Shop](shop.png)
+![Shop](/shop.png)
 
 ### 📦 Products
 
@@ -289,7 +289,7 @@ Laravel migrations are included in the project for creating and maintaining the 
 
 ### 📊 Admin Dashboard
 
-![Admin Dashboard](/admin dashboard.png)
+![Admin Dashboard](/Admin dashboard.png)
 
 ### 📦 Admin Products
 
