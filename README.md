@@ -276,35 +276,32 @@ Laravel migrations are included in the project for creating and maintaining the 
 
 ### 🛍️ Shop
 
-![Shop](/Shop.png)
+![Shop](Shop.png)
 
-### 📦 Products
+### 📦 Product Details
 
-![Products](/product.png)
-
-### 🔎 Product Details
-
-![Product Details](/product-detail.png)
+![Product Details](product.png)
 
 ### 🛒 Shopping Cart
 
-![Shopping Cart](/cart.png)
+![Shopping Cart](cart.png)
 
 ### 💳 Checkout
 
-![Checkout](/checkout.png)
+![Checkout](checkout.png)
 
 ### 📊 Admin Dashboard
 
-![Admin Dashboard](/Admin-dashboard.png)
+![Admin Dashboard](Admin-dashboard.png)
 
 ### 📦 Admin Products
 
-![Admin Products](/admin-products.png)
+![Admin Products](admin-products.png)
 
 ### 🧾 Admin Orders
 
-![Admin Orders](/admin-order.png)
+![Admin Orders](admin-order.png)
+
 
 ### Customer Website
 
