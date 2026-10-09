@@ -185,95 +185,120 @@ Administrators can access:
 
 ## ⚙️ Installation
 
-Follow the steps below to run the project locally.
+Follow these steps to set up and run the Laravel E-Commerce Management System locally.
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/samina2108/laravel-ecommerce-management-system.git
-```
-
-### 2. Open the Project
-
-```bash
 cd laravel-ecommerce-management-system
 ```
 
-### 3. Install PHP Dependencies
+### 2. Install PHP Dependencies
 
 ```bash
 composer install
 ```
 
-### 4. Create Environment File
+### 3. Create the Environment File
 
-Copy the `.env.example` file and create:
+Copy `.env.example` to `.env`.
 
-```text
-.env
+**Windows (Command Prompt):**
+
+```bash
+copy .env.example .env
 ```
 
-### 5. Generate Application Key
+**macOS / Linux:**
+
+```bash
+cp .env.example .env
+```
+
+### 4. Generate the Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-### 6. Configure Database
+### 5. Configure the Database
 
-Open the `.env` file and configure your MySQL database:
+Create a MySQL database using phpMyAdmin or your preferred MySQL tool.
+
+Open `.env` and update these settings with your own database credentials:
 
 ```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
 DB_DATABASE=your_database_name
 DB_USERNAME=your_database_username
 DB_PASSWORD=your_database_password
 ```
 
-### 7. Run Migrations
+### 6. Run Database Migrations
 
 ```bash
 php artisan migrate
 ```
 
-### 8. Create Storage Link
+### 7. Create the Storage Link
 
 ```bash
 php artisan storage:link
 ```
 
-### 9. Install Frontend Dependencies
+This enables Laravel to serve uploaded product images from the public storage directory.
+
+### 8. Install Frontend Dependencies
+
+Make sure Node.js and npm are installed, then run:
 
 ```bash
 npm install
 ```
 
-### 10. Run Vite
+### 9. Start the Development Environment
+
+Open two terminals in the project directory.
+
+**Terminal 1 — Vite development server:**
 
 ```bash
 npm run dev
 ```
 
-### 11. Start Laravel Server
+**Terminal 2 — Laravel development server:**
 
 ```bash
 php artisan serve
 ```
 
-The application will normally be available at:
+Open the application at:
 
-```text
 http://127.0.0.1:8000
+
+### Production Frontend Build
+
+To compile frontend assets for deployment, run:
+
+```bash
+npm run build
 ```
+
+For local development, use `npm run dev`. For production deployment, build the assets with `npm run build`.
 
 ---
 
 ## 🗄️ Database
 
-The project uses **MySQL** as the database.
+This project uses **MySQL** to store application data.
 
-Laravel migrations are included in the project for creating and maintaining the database structure.
+Laravel migrations define the database structure. Configure your database credentials in `.env` before running the migrations.
 
----
+**Note:** If the project requires demo records, seeders must be available and configured before running any database seeding commands.
+
 
 ## 📸 Screenshots
 
