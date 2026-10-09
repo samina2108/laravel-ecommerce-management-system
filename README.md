@@ -10,10 +10,13 @@ This project was developed as a portfolio project to demonstrate practical **Lar
 
 ### Demo Credentials
 
-| Role     | Email                    | Password          |
-| -------- | ------------------------ | ----------------- |
-| Admin    | `admin@example.com`   | `Admin@12345` |
-| Customer | `samina@gmail.com` | 'samina12345' |
+| Role     | Email               | Password      |
+| -------- | ------------------- | ------------- |
+| Admin    | `admin@example.com` | `Admin@12345` |
+| Customer | `samina@gmail.com`  | `samina12345` |
+
+**Note:** Demo credentials ko live website par login karke verify karein. Ye accounts sirf testing ke liye hon aur in par sensitive data na ho.
+
 
 ---
 
